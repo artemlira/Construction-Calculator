@@ -36,7 +36,8 @@
                <h2>Вкажіть назву та площу кімнат</h2>
                <ul class="options">
                   <li class="first_button buttons">
-                     <input name="type_building" type="text" value="" placeholder="Назва приміщення">
+                     <input name="type_building" class="name__building" type="text" value=""
+                        placeholder="Назва приміщення">
                   </li>
                   <li class="second_button buttons">
                      <input name="type_building" class="square" type="number" value="" placeholder="0.00">
@@ -67,8 +68,6 @@
          wrapper: '.wrapper',
          images: 'img',
          typeBuilding: 'select',
-         rooms: '.options',
-         allRooms: 'ul',
          dataBody: 'options',
          areaRoom: 'square',
          result: 'span',
