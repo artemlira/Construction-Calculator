@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+
+         <div class="container__images">
+            <div class="image__home">
+               <img src="image/pic/home.png" alt="">
+            </div>
+         </div>
+
+         <form class="container__data" action="/" method="post">
+
+            <div class="data__header">
+               <h2>Оберіть тип приміщення</h2>
+               <select name="type_building">
+                  <option value="100" data-pic="image/pic/home.png">Приватний будинок</option>
+                  <option value="300" data-pic="image/pic/apartment.png">Квартира</option>
+                  <option value="500" data-pic="image/pic/office.png">Офісне приміщення
+                  </option>
+               </select>
+            </div>
+
+            <div class="data__body">
+               <h2>Вкажіть назву та площу кімнат</h2>
+               <ul class="options">
+                  <li class="first_button buttons">
+                     <input name="type_building" type="text" value="" placeholder="Назва приміщення">
+                  </li>
+                  <li class="second_button buttons">
+                     <input name="type_building" class="square" type="number" value="" placeholder="0.00">
+                  </li>
+                  <li class="third_button add_button">
+                     <input name="type_building" class="add_button" type="button" value="+" placeholder="+">
+                  </li>
+                  <li class="fourth_button hide_button hide">
+                     <input name="type_building" class="hide_button" type="button" value="-" placeholder="-">
+                  </li>
+               </ul>
+            </div>
+
+            <footer class="footer">
+               <div class="footer_button">
+                  <input name="type_building" type="button" value="Розрахувати">
+               </div>
+               <h2>Приблизна вартість ремонту</h2>
+               <p><span>0.00 </span> uah</p>
+            </footer>
+
+         </form>
+      </div>
+   </div>
+   <script src="js/main.js"></script>
+   <script>
+      const obj = {
+         wrapper: '.wrapper',
+         images: 'img',
+         typeBuilding: 'select',
+         rooms: '.options',
+         allRooms: 'ul',
+         dataBody: 'options',
+         areaRoom: 'square',
+         result: 'span',
+      }
+
+      let calc = new ConstructionCalculator(obj);
+      calc.init();
+   </script>
+</body>
+
+</html>
